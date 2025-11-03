@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nuematria™ Love & Twin Flame Calculator</title>
+
+  <!-- ✅ Favicon -->
+  <link rel="icon" type="image/png" href="Nuematria™Favicon.png">
+
+  <!-- ✅ Open Graph / Social Preview -->
+  <meta property="og:title" content="Nuematria™ Love & Twin Flame Calculator">
+  <meta property="og:description" content="Discover your sacred connections through vibrational mathematics.">
+  <meta property="og:image" content="https://alanabsolutia.github.io/Nuematria-Tools/Nuematria™Favicon.png">
+  <meta property="og:url" content="https://alanabsolutia.github.io/Nuematria-Tools/">
+  <meta property="og:type" content="website">
+
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nuematria™ Love & Twin Flame Calculator">
+  <meta name="twitter:description" content="Decode names, frequencies, and connections with Nuematria Science.">
+  <meta name="twitter:image" content="https://alanabsolutia.github.io/Nuematria-Tools/Nuematria™Favicon.png">
+
+  <!-- ✅ Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body { background: #ffffff; color: #000; font-family: 'Segoe UI', sans-serif; padding: 40px 20px; text-align: center; }
+    .logo { font-size: 64px; color: #8a2be2; margin-bottom: 20px; }
+    h1 { font-weight: bold; color: #000; }
+    p.subtitle { font-size: 0.95rem; color: #333; margin-bottom: 30px; }
+    .container { max-width: 550px; margin: 0 auto; padding: 30px; border-radius: 20px; background: #f9f9f9; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); }
+    .form-control { border-radius: 12px; border: 1px solid #aaa; padding: 10px; }
+    .row .form-control { margin-bottom: 15px; }
+    .btn-calc, .btn-reset { padding: 10px 0; font-weight: bold; border-radius: 12px; width: 48%; margin: 10px 1%; }
+    .btn-calc { background: linear-gradient(to right, #6f42c1, #d63384); color: white; border: none; }
+    .btn-reset { background: linear-gradient(to right, #e0b3ff, #f5b0d1); color: white; border: none; }
+    .heart { font-size: 64px; color: #cc0066; margin: 20px auto; }
+    .result-box { background: #fff; padding: 20px; border-radius: 15px; margin-top: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .footer { font-size: 12px; color: #777; margin-top: 40px; }
+
+    @media (max-width: 992px) { body { padding: 30px 15px; } h1 { font-size: 1.6rem; } .logo { font-size: 48px; } }
+    @media (max-width: 768px) { .container { padding: 20px; } h1 { font-size: 1.4rem; } p.subtitle { font-size: 0.9rem; } }
+    @media (max-width: 576px) { .btn-calc, .btn-reset { width: 100%; margin-bottom: 10px; } .logo { font-size: 42px; } h1 { font-size: 1.25rem; } .container { border-radius: 15px; padding: 15px; } .result-box { padding: 15px; } }
+    @media (max-width: 400px) { .logo { font-size: 36px; } .heart { font-size: 48px; } }
+  </style>
+</head>
+<body>
+  <div class="logo">⚛️</div>
+  <h1>NUEMATRIA LOVE &<br>TWIN FLAME CALCULATOR</h1>
+  <p class="subtitle">Discover your sacred connections through vibrational mathematics.</p>
+
+  <div class="container shadow-lg">
+    <form id="loveForm">
+      <div class="row">
+        <div class="col-12 mb-3"><input type="text" id="yourName" class="form-control" placeholder="Your Name" required></div>
+        <div class="col-12 mb-3"><input type="date" id="yourBirthdate" class="form-control" required></div>
+        <div class="col-md-6 col-12 mb-3"><input type="text" id="partnerName" class="form-control" placeholder="Partner’s Name" required></div>
+        <div class="col-md-6 col-12 mb-3"><input type="date" id="partnerBirthdate" class="form-control" required></div>
+      </div>
+      <div class="d-flex flex-wrap justify-content-center">
+        <button type="submit" class="btn btn-calc">CALCULATE</button>
+        <button type="reset" class="btn btn-reset">RESET</button>
+      </div>
+    </form>
+
+    <div id="result" class="result-box" style="display:none;">
+      <div class="heart" id="percent">94%</div>
+      <p id="compatibility">Alan Parks ❤️ Kendall Jenner = 94% compatible!</p>
+      <p id="message">Twin Flame detected. Cosmic destiny unfolds.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    Powered by Nuematria Science — Clone 9/9 Sovereign Order
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('loveForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const yourName = document.getElementById('yourName').value.trim();
+      const partnerName = document.getElementById('partnerName').value.trim();
+      const matches = [
+        { name: 'Alan Parks', partner: 'Kendall Jenner', percent: 94 },
+        { name: 'David Beckham', partner: 'Victoria Beckham', percent: 79 },
+        { name: 'Kanye West', partner: 'Kim Kardashian', percent: 18 }
+      ];
+      let match = matches.find(item =>
+        item.name.toLowerCase() === yourName.toLowerCase() &&
+        item.partner.toLowerCase() === partnerName.toLowerCase()
+      );
+      let percent;
+      if (match) { percent = match.percent; } 
+      else {
+        const nameTotal = yourName.length + partnerName.length;
+        percent = (nameTotal * 7) % 101;
+        if (percent < 30) percent += 40;
+      }
+      document.getElementById('percent').innerText = percent + '%';
+      document.getElementById('compatibility').innerText = `${yourName} ❤️ ${partnerName} = ${percent}% compatible!`;
+      document.getElementById('message').innerText = (percent >= 90 ? 'Twin Flame detected. Cosmic destiny unfolds.' : 'Love is a journey.');
+      document.getElementById('result').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
