@@ -1,1 +1,71 @@
+/* ==============================
+   Nuematria™ Bridge Theme System
+   Created for cross-platform harmony
+   ============================== */
+
+/* 🌈 Brand Color Palette */
+:root {
+  --nuematria-pink: #ff6fb5;
+  --nuematria-violet: #b84cc5;
+  --nuematria-white: #fff8fb;
+  --nuematria-gray: #444;
+}
+
+/* 🪶 Global Typography */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--nuematria-white);
+  color: var(--nuematria-gray);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* ✨ Headings */
+h1, h2, h3 {
+  font-weight: 600;
+  color: var(--nuematria-violet);
+}
+
+/* 💖 Icons */
+.bi {
+  color: var(--nuematria-violet);
+  vertical-align: middle;
+  transition: color 0.3s ease;
+}
+.bi:hover {
+  color: var(--nuematria-pink);
+}
+
+/* 💎 Buttons */
+.btn-nuematria {
+  background: linear-gradient(90deg, var(--nuematria-violet), var(--nuematria-pink));
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 18px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(184, 76, 197, 0.3);
+  transition: all 0.3s ease;
+}
+.btn-nuematria:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(255, 111, 181, 0.4);
+}
+
+/* 📱 Responsive Helpers */
+@media (max-width: 768px) {
+  .btn-nuematria {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+}
 
