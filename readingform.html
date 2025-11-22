@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuematria™ Reading Request Form</title>
+
+  <link rel="icon" type="image/png" href="assets/Favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fff7ef, #ffe0b5);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .form-container {
+      background: #ffffff;
+      max-width: 700px;
+      margin: auto;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(255, 143, 66, 0.25);
+    }
+
+    h1 {
+      font-weight: 600;
+      color: #d2691e;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    p {
+      color: #8a4b00;
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: 600;
+      color: #8a4b00;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: #ff8c42;
+      color: white;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      padding: 12px;
+      transition: 0.3s;
+    }
+
+    .btn-submit:hover {
+      background: #d36a1c;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-buttons a {
+      font-size: 14px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="form-container">
+
+  <h1>Start Your Nuematria™ Reading</h1>
+  <p>Provide your details below. You will receive your personal Nuematria™ reading within 3 business days.</p>
+
+  <!-- ⭐ Mailchimp FORM START -->
+  <form action="YOUR_MAILCHIMP_ACTION_LINK_HERE" method="post" class="validate" target="_blank" novalidate>
+
+    <!-- Email -->
+    <div class="mb-3">
+      <label for="mce-EMAIL" class="form-label">Email Address *</label>
+      <input type="email" name="EMAIL" class="form-control" id="mce-EMAIL" required>
+    </div>
+
+    <!-- Full Name -->
+    <div class="mb-3">
+      <label for="mce-FNAME" class="form-label">Full Name *</label>
+      <input type="text" name="FNAME" class="form-control" id="mce-FNAME" required>
+    </div>
+
+    <!-- Partner Name (Optional) -->
+    <div class="mb-3">
+      <label class="form-label">Partner's Name (Optional)</label>
+      <input type="text" name="LNAME" class="form-control">
+    </div>
+
+    <!-- Type of Reading -->
+    <div class="mb-3">
+      <label class="form-label">Select Reading</label>
+      <select class="form-select" name="READING_TYPE">
+        <option value="Kryptonite Insight">Decode Your Kryptonite — $11</option>
+        <option value="Soul Story Past Life">Soul Story + Past Life Reveal — $22</option>
+        <option value="Full Deluxe Reading">Full Deluxe Intensive — $88</option>
+      </select>
+    </div>
+
+    <!-- Hidden Bot Protection -->
+    <div style="position:absolute; left:-5000px;" aria-hidden="true">
+      <input type="text" name="b_ca762be1e09f61ff2784f410b_01553c2b17" tabindex="-1" value="">
+    </div>
+
+    <!-- Submit -->
+    <button type="submit" class="btn-submit">Submit Reading Request</button>
+
+  </form>
+  <!-- ⭐ Mailchimp FORM END -->
+
+  <!-- ⭐ Navigation Buttons -->
+  <div class="nav-buttons mt-4">
+    <a href="readings.html" class="btn btn-outline-warning btn-sm">← Back to Readings</a>
+    <a href="showcase.html" class="btn btn-outline-primary btn-sm">❤️ Love Showcase</a>
+    <a href="index.html" class="btn btn-outline-dark btn-sm">💗 Try Calculator</a>
+    <a href="https://ko-fi.com/alannuematria" target="_blank" class="btn btn-outline-danger btn-sm">☕ Return to Ko-Fi</a>
+  </div>
+
+</div>
+
+</body>
+</html>
